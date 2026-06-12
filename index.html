@@ -1,1 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho 2026 - Lúcio Lopes Boza</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
 
+        body {
+            line-height: 1.6;
+            background-color: #f7f9fc;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        nav {
+            background: #388E3C;
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            padding: 15px 0;
+            display: inline-block;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background: #2E7D32;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: auto;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-in-out;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2E7D32;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: disc inside;
+            margin-bottom: 20px;
+        }
+
+        /* Galeria */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Formulário de contato */
+        form {
+            max-width: 600px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background: #388E3C;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: #2E7D32;
+        }
+
+        footer {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        @media(max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Agrinho 2026</h1>
+        <p>Projeto Educacional - Lúcio Lopes Boza</p>
+    </header>
+
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#atividades">Atividades</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <section id="sobre">
+        <h2>Sobre o Agrinho</h2>
+        <p>O Agrinho é um programa educacional que visa conscientizar crianças e jovens sobre cidadania, meio ambiente, saúde, ética e cultura. Em 2026, o projeto continua com o compromisso de estimular valores essenciais para a formação de cidadãos responsáveis e conscientes.</p>
+        <p>O objetivo principal é integrar educação, família e comunidade, incentivando práticas de solidariedade, respeito e cuidado com o planeta. Participar do Agrinho é uma forma de transformar pequenas atitudes em grandes mudanças para a sociedade.</p>
+    </section>
+
+    <section id="atividades">
+        <h2>Atividades do Agrinho 2026</h2>
+        <p>Durante o Agrinho 2026, os alunos poderão participar de diversas atividades como:</p>
+        <ul>
+            <li>Concursos de redação e desenho sobre cidadania e meio ambiente.</li>
+            <li>Oficinas educativas sobre sustentabilidade e ética.</li>
+            <li>Projetos comunitários e ações solidárias.</li>
+            <li>Eventos culturais e esportivos promovidos pela escola.</li>
+        </ul>
+    </section>
+
+    <section id="galeria">
+        <h2>Galeria de Fotos</h2>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/400x300?text=Atividade+1" alt="Atividade 1">
+            <img src="https://via.placeholder.com/400x300?text=Atividade+2" alt="Atividade 2">
+            <img src="https://via.placeholder.com/400x300?text=Atividade+3" alt="Atividade 3">
+            <img src="https://via.placeholder.com/400x300?text=Atividade+4" alt="Atividade 4">
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <form id="contatoForm">
+            <input type="text" name="nome" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu email" required>
+            <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+            <input type="submit" value="Enviar Mensagem">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Agrinho - Lúcio Lopes Boza. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Efeito de animação ao rolar
+        const sections = document.querySelectorAll('section');
+
+        function checkVisible() {
+            const triggerBottom = window.innerHeight / 5 * 4;
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if(sectionTop < triggerBottom){
+                    section.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkVisible);
+        window.addEventListener('load', checkVisible);
+
+        // Validação simples do formulário
+        const form = document.getElementById('contatoForm');
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+            const nome = form.nome.value.trim();
+            const email = form.email.value.trim();
+            const mensagem = form.mensagem.value.trim();
+
+            if(nome === "" || email === "" || mensagem === "") {
+                alert("Por favor, preencha todos os campos.");
+                return;
+            }
+
+            // Exemplo de feedback
+            alert(`Obrigado pela mensagem, ${nome}! Entraremos em contato em breve.`);
+            form.reset();
+        });
+
+        // Zoom interativo na galeria
+        const galleryImages = document.querySelectorAll('.gallery img');
+        galleryImages.forEach(img => {
+            img.addEventListener('click', () => {
+                const src = img.src;
+                const overlay = document.createElement('div');
+                overlay.style.position = 'fixed';
+                overlay.style.top = 0;
+                overlay.style.left = 0;
+                overlay.style.width = '100%';
+                overlay.style.height = '100%';
+                overlay.style.background = 'rgba(0,0,0,0.8)';
+                overlay.style.display = 'flex';
+                overlay.style.alignItems = 'center';
+                overlay.style.justifyContent = 'center';
+                overlay.style.cursor = 'pointer';
+                overlay.innerHTML = `<img src="${src}" style="max
